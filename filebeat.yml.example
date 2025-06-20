@@ -1,0 +1,10 @@
+# Tell Filebeat which log file to watch
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/syslog
+
+# Tell Filebeat where to send the logs
+output.logstash:
+  hosts: ["localhost:5044"]
